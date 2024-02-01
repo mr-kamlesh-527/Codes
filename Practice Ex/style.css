@@ -1,0 +1,222 @@
+:root {
+  --clr-primary: #141414;
+  --clr-secondary: #00000;
+  --clr-surface: #141414;
+  --clr-surface-muted: hsl(0, 0%, 4%);
+  --clr-surface-bright: hsl(0, 0%, 12%);
+  --clr-text: hsl(0, 0%, 85%);
+  --clr-text-muted: hsl(0, 0%, 70%);
+  --clr-text-bright: hsl(0, 0%, 97%);
+  --gradient: linear-gradient(-45deg, var(--clr-primary), var(--clr-secondary));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background: var(--clr-surface);
+  color: var(--clr-text);
+  height: auto; 
+  /* Removes user select for making it easier to nav on mobile */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+h2 { /* Used for page headers */
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h3 { /* used for image description */
+  text-align: center;
+  font-size 11px;
+  color: #484848;
+  font-style: italic;
+}
+section {
+  padding-block: 8rem;
+}
+
+.body {
+  width: min(100% - 3rem, 55rem);
+  margin-inline: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.container {
+  height: auto;
+  background-color: #484848;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Site header */
+.site-header {
+  background-image: url("https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg");
+  background-position: bottom;
+  background-size: cover;
+  padding: 5rem;
+  min-height: 70vh;
+  position: sticky;
+  box-shadow: 1px 0px 15px rgba(255,255,255,0.08);
+}
+
+.site-header-mask {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.2);
+  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg");
+  -webkit-mask-position: center bottom;
+  -webkit-mask-size: 100%;
+
+}
+
+.site-title {
+  text-align: center;
+  font-size: clamp(3rem, 9vw + 0.4rem, 8rem);
+  /*color: rgba(0,0,0,0.4); */
+  /*text-shadow: 2px 2px 4px rgba(0,0,0,0.2); */
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  padding-top: 15%;
+  letter-spacing: 20px;
+}
+
+/* Nav drop down */
+
+/* Custom Scrollbar & scroll behavior */
+::-webkit-scrollbar {
+    width: 14px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #484848;
+}
+::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Image hover zoom just add zoom class to image div */
+.zoom {
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  box-shadow: 1px 1px 15px rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+/* Button zoom on hover */
+.buttonZoom {
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.buttonZoom:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transform: scale(1.01); 
+  border-radius: 5px;
+}
+.text-divider {
+  --text-divider-gap: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.text-divider::before, .text-divider::after {
+  content: '';
+  height: 1px;
+  background-color: silver;
+  flex-grow: 1;
+}
+
+.text-divider::before {
+  margin-right: var(--text-divider-gap);
+}
+
+.text-divider::after {
+  margin-left: var(--text-divider-gap);
+}
+
+/* Footer same method as body */
+footer {
+    box-shadow: 1px 1px 15px rgba(255,255,255,0.08);
+    background-color: #484848;
+}
+
+.footer {
+  height: auto;
+  width: min(100% - 3rem, 55rem);
+  margin-inline: auto;
+  padding: 10px;
+}
+
+h4 {
+  font-size 5px;
+  color: #636262;
+}
+
+/* Buttons */
+a {
+  background-color: #484848;
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--clr-text);
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a:hover {
+    box-shadow: 1px 1px 15px rgba(255,255,255,0.2);
+}
+
+.pageLeft {
+  float: left;
+}
+.pageRight {
+  float: right;
+}
