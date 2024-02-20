@@ -1,6 +1,7 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+// this is used for creating table in database with respect to class name 
 @Entity
 public class Employee {
 	// Rules pojo / model/ entity / encapsulated / persist /bean class
