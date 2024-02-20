@@ -11,6 +11,7 @@ import org.hibernate.criterion.Restrictions;
 public class TestDoctor {
 	public static void main(String[] args) {
 		Configuration cfg=new Configuration();
+	System.out.println("step 1......");
 		cfg.addAnnotatedClass(Doctor.class).configure("kamlesh.xml");
 
 		SessionFactory sf=cfg.buildSessionFactory();
