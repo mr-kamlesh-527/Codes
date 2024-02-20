@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 public class EmpController {
 	public static void main(String[] args) {
 		Configuration cfg=new Configuration();
-		
+		System.out.println("step 1......");
 		cfg.addAnnotatedClass(Employee.class).configure();
 		
 		SessionFactory sf=cfg.buildSessionFactory();
